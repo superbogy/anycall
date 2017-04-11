@@ -1,0 +1,19 @@
+{
+  "name": "anycall",
+  "version": "0.1.0",
+  "description": "callbacl to promise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/superbogy/anycall.git"
+  },
+  "author": "mulberry10",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/superbogy/anycall/issues"
+  },
+  "homepage": "https://github.com/superbogy/anycall#readme"
+}
