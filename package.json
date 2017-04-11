@@ -1,6 +1,6 @@
 {
   "name": "anycall",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "callbacl to promise",
   "main": "index.js",
   "scripts": {

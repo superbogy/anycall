@@ -1,6 +1,5 @@
 # anycall
   callback convert to promise
-
 --------
 ### get start
  npm install anycall --save

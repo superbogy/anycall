@@ -1,20 +1,20 @@
-const anycall = function(instance) {
+const anycall = function (instance) {
   this.action = null;
   this.obj = instance;
-}
+};
 
 // set action
-anycall.prototype.any = (action) => {
-  if (this.$obj && this.$obj[method]) {
-    this.$method = this.$obj[method];
+anycall.prototype.any = function (action) {
+  if (this.obj && this.obj[action]) {
+    this.action = this.obj[action];
   } else {
-    this.$method = method;
+    this.action = action;
   }
   return this;
 };
 
 // promise wrapper
-anycall.prototype.call = (...args) => {
+anycall.prototype.sync = function (...args) {
   return new Promise((resolve, reject) => {
     const closure = (err, ...result) => {
       if (err) {
@@ -26,3 +26,5 @@ anycall.prototype.call = (...args) => {
     this.action.apply(this.obj, args);
   });
 };
+
+module.exports = anycall;
