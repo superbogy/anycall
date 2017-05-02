@@ -1,4 +1,7 @@
 const anycall = function (instance) {
+  if(!(this instanceof anycall)) {
+    return new anycall(instance);
+  }
   this.action = null;
   this.obj = instance;
 };
@@ -27,4 +30,9 @@ anycall.prototype.sync = function (...args) {
   });
 };
 
+anycall.prototype.call = function (...args) {
+  this.sync(args);
+};
+
 module.exports = anycall;
+
