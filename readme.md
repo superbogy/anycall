@@ -8,10 +8,10 @@
   foo(id, callback) => {
     callback(null, id);
   }
- } 
- new anycall(obj).any('foo').call(11);
+ }; 
+ anycall(obj).any('foo').call(11);
 
  or
 
- new anycall().any(obj.foo).call(11);
+ anycall().any(obj.foo).call(11);
  ```
