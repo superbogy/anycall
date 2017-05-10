@@ -31,7 +31,7 @@ anycall.prototype.sync = function (...args) {
 };
 
 anycall.prototype.call = function (...args) {
-  return this.sync(args);
+  return this.sync(...args);
 };
 
 module.exports = anycall;
