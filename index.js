@@ -3,16 +3,18 @@ const anycall = function (instance) {
     return new anycall(instance);
   }
   this.action = null;
-  const properties = Object.keys(instance);
+  this.obj = instance;
+  const properties = Object.keys(this.obj);
   properties.map((item) => {
     if (!item) return;
-    this.prototype[item] = (...args) => {
-      this.action = instance[item];
+    anycall.prototype[item] = (...args) => {
+      this.action = this.obj[item];
       return this.sync(...args);
     }
   });
-  this.obj = instance;
+  console.log(anycall.prototype);
 };
+
 
 // set action
 anycall.prototype.any = function (action) {
@@ -43,4 +45,3 @@ anycall.prototype.call = function (...args) {
 };
 
 module.exports = anycall;
-
