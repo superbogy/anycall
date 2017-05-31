@@ -3,6 +3,14 @@ const anycall = function (instance) {
     return new anycall(instance);
   }
   this.action = null;
+  const properties = Object.keys(instance);
+  properties.map((item) => {
+    if (!item) return;
+    this.prototype[item] = (...args) => {
+      this.action = instance[item];
+      return this.sync(...args);
+    }
+  });
   this.obj = instance;
 };
 
