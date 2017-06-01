@@ -12,7 +12,6 @@ const anycall = function (instance) {
       return this.sync(...args);
     }
   });
-  console.log(anycall.prototype);
 };
 
 
